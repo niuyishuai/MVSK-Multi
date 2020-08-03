@@ -1,4 +1,4 @@
 function savefigtofile(filename)
-    print(filename,'-deps');
-    %print(filename,'-djpeg');
+    print(filename,'-depsc');
+    print(filename,'-djpeg');
 end

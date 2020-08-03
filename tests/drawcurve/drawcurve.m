@@ -76,5 +76,5 @@ end
 plot(X,Y,'--go','LineWidth',1.5,...
              'MarkerFaceColor',[0,1,0]);    
 drawskfig('stdmvskef.mat',1);
-savefigtofile('10thousands.jpg');
+savefigtofile('10thousands');
 
