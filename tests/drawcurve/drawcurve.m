@@ -73,8 +73,8 @@ for i=1:length(datafilenamelst)
     Y(:,i)=S.skewness';
     fprintf('%.2f%%\n',100*i/length(datafilenamelst));
 end
-plot(X,Y,'--go','LineWidth',1.5,...
-             'MarkerFaceColor',[0,1,0]);    
+plot(X(:,1:50:end),Y(:,1:50:end),'--go','MarkerSize',5,'LineWidth',1.5);%,...
+          %   'MarkerFaceColor',[0,1,0]);    
 drawskfig('stdmvskef.mat',1);
 savefigtofile('10thousands');
 
