@@ -7,8 +7,10 @@
 % save(['stdmvskef','.mat'],'S');
 figure(1)
 drawmvfig('stdmvskef.mat',1);
+savefigtofile('benchmarkmv');
 figure(2)
 drawskfig('stdmvskef.mat',1);
+savefigtofile('benchmarksk');
 %% 
 % Second Step: an example that sk-epsilon crossing the pseudo one 
 % corresponding to mv efficient frontier
@@ -19,12 +21,14 @@ drawskfig('stdmvskef.mat',1);
 % save(['mvskef_1','.mat'],'S');
 figure(1)
 hold on;
-drawmvfig('stdmvskef.mat',1);
 drawmvfig('mvskef_1.mat',2);
+drawmvfig('stdmvskef.mat',1);
 figure(2)
 hold on;
-drawskfig('stdmvskef.mat',1);
 drawskfig('mvskef_1.mat',2);
+drawskfig('stdmvskef.mat',1);
+savefigtofile('pseudoskvssk');
+
 %%
 %Third Step: generate 10 pseudo curves 
 %(including the previous one, some crossing, some not) 
@@ -46,6 +50,7 @@ for i=1:9
 drawskfig(['mvskef_',num2str(i),'.mat'],2);
 end
 drawskfig('stdmvskef.mat',1);
+savefigtofile('10sk');
 %%
 %Fourth Step: generate 10 thousands pseudo curves 
 %--------------------------------------------------------------
@@ -68,7 +73,8 @@ for i=1:length(datafilenamelst)
     Y(:,i)=S.skewness';
     fprintf('%.2f%%\n',100*i/length(datafilenamelst));
 end
-plot(X,Y,'-go','LineWidth',1.5,...
+plot(X,Y,'--go','LineWidth',1.5,...
              'MarkerFaceColor',[0,1,0]);    
 drawskfig('stdmvskef.mat',1);
+savefigtofile('10thousands.jpg');
 
