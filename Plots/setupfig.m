@@ -1,17 +1,17 @@
 function setupfig
     h=gcf;
-    % è®¾ç½® figureå±æ€§
+    % ÉèÖÃ figureÊôĞÔ
     set(h,'InvertHardcopy','off','PaperUnits','points',...
         'Color',[1 1 1],...
         'Renderer','painters',...
         'position',[100 300 800 530]);
     %'PaperPositionMode','auto',...
         
-    % è®¾ç½®åæ ‡è½´
+    % ÉèÖÃ×ø±êÖá
     axes1 = gca; %axes('Parent',h); 
     box(axes1,'on');
     set(axes1,'looseInset',[0 0 0 0]);
     
-    % è®¾ç½®å…¶ä½™åæ ‡åŒºå±æ€§
+    % ÉèÖÃÆäÓà×ø±êÇøÊôĞÔ
     %set(axes1,'FontSize',13.5,'LineWidth',0.634920634920635);
 end
