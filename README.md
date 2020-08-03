@@ -12,5 +12,5 @@ MVSK多目标资产组合优化建模和求解
 ```matlab-code
 paretoopt(loop,idxN,muoverline,method,activateparal)
 ```
-其中最后一个参数`activateparal`设置是否使用MATLAB并行计算。设置为true为使用并行计算, false为不适用并行计算。
+其中最后一个参数`activateparal`设置是否使用MATLAB并行计算。设置为true开启并行计算, false则取消并行。
 
