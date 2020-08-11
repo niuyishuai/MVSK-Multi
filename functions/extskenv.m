@@ -8,10 +8,10 @@ s=[nameprefix,'skewness'];
 
 k=[nameprefix,'kurtosis'];
 datafilenamelist=dir([s,'/*.mat']);
-step=0.2;
+step=0.4;%0.2
 tol=step/2;
 minrange=0;
-maxrange=40;
+maxrange=80;%40;
 len=ceil((maxrange-minrange)/step)+1;
 results.m=inf(1,len);
 results.v=results.m;
@@ -65,6 +65,6 @@ for i=1:length(datafilenamelist)
             
         end
     end
-%fprintf('the %d/%d is done \n',i,length(datafilenamelist));
+fprintf('the %d/%d is done \n',i,length(datafilenamelist));
 end
 end

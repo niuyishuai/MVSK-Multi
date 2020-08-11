@@ -4,7 +4,7 @@ function S=mvskcurve(p,muoverline,method)
 % p            :a struct
 % muoverline   :upper bound of mu;
 % method       :strategy of chongsing epsilon
-npoints=40;
+npoints=100;
 e=p.e;
 V=p.V;
 AssetSkewness=p.AssetSkewness;
