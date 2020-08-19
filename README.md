@@ -5,7 +5,7 @@ MVSK多目标资产组合优化建模和求解
 在MATLAB中执行脚本 `setup.m`或者把所有子目录加入MATLAB的PATH中。
 
 ## 案例
-请参考tests目录下的两个案例 `drawcurve.m` 和 `drawdiffepsfig.m`
+请参考tests目录下的三个案例 `drawcurve.m`, `drawdiffepsfig.m`和 `checkskconvexity.m`
 
 ## 并行计算
 `paretoopt`函数是帕累托优化求解器, 可以同时并行求解多个多目标资产组合规划问题，调用格式为:
